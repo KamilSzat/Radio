@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Radio.MainPage">
+
+    <VerticalStackLayout Padding="40">
+        <Label x:Name="label"
+            Text="Slider 1"
+            HorizontalOptions="Center"/>
+
+        <Slider x:Name="Slider" 
+                Minimum="5" 
+                Maximum="50"
+                ValueChanged="OnSliderValueChanged"
+/>
+        
+        
+        <Label x:Name="label1"
+            Text="Zdanie testowe"
+               FontSize="20"
+           HorizontalTextAlignment="Start"/>
+        
+        <Button Text="zmiana koloru" 
+        Padding="15"
+        Clicked="ButtonClicked"/>
+
+        <HorizontalStackLayout>
+            <Label Text="Zmiana położenia strony  " />
+            <RadioButton x:Name="Left"
+                Content="Lewo" 
+                         GroupName="TextAligment"
+                        CheckedChanged="TextAligment_Chenged"
+  
+                         />
+            <RadioButton x:Name="Right"
+                Content="Prawo"
+                         GroupName="TextAligment"
+                         CheckedChanged="TextAligment_Chenged"
+                        />
+            <RadioButton x:Name="Center"
+                Content="Środek" 
+                         GroupName="TextAligment"
+                         CheckedChanged="TextAligment_Chenged"
+                         />
+        </HorizontalStackLayout>
+ 
+
+    </VerticalStackLayout>
+</ContentPage>
